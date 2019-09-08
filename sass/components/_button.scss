@@ -13,20 +13,9 @@
   box-shadow: 0 1px 0 rgba(0, 0, 0, .45);
   border-radius: 2px;
 
-  &,
-  &:link,
-  &:visited {}
-
-  &::after {}
-
   &:hover {
     opacity: .9;
-
-    &::after {}
   }
-
-  &:active,
-  &:focus {}
 
   &--xl {
     font-size: 2rem;
