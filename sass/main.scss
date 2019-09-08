@@ -2,11 +2,13 @@
 
 @import "base/base";
 @import "base/typography";
+@import "base/utilities";
 
 @import "components/button";
 
 @import "layout/showcase";
 @import "layout/tabs";
+@import "layout/tabcontent";
 @import "layout/grid";
 
 @import "pages/home";

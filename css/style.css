@@ -28,12 +28,25 @@ body {
 .paragraph {
   margin: .5rem 0; }
 
+img {
+  width: 100%; }
+
 ul {
   list-style: none; }
 
 a {
   color: #fff;
   text-decoration: none; }
+
+.text-lg {
+  font-size: 1.8rem;
+  margin-bottom: 1rem; }
+
+.text-center {
+  text-align: center; }
+
+.text-dark {
+  color: #999; }
 
 /* Styling for button */
 .btn {
@@ -136,6 +149,17 @@ a {
     padding-top: .5rem; }
   .tabs__tab-border {
     border-bottom: 4px solid #e50914; }
+
+.tab-content {
+  padding: 3rem 0;
+  background: #000;
+  color: #fff; }
+  #tab-content-1 .tab-content__inner-1 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+    align-items: center;
+    justify-content: center; }
 
 .container {
   max-width: 70%;

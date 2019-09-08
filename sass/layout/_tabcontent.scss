@@ -1,0 +1,13 @@
+.tab-content {
+  padding: 3rem 0;
+  background: #000;
+  color: #fff;
+
+  #tab-content-1 &__inner-1 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+    align-items: center;
+    justify-content: center;
+  }
+}
