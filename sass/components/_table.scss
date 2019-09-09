@@ -1,0 +1,25 @@
+.table {
+  width: 100%;
+  margin-top: 2rem;
+  border-collapse: collapse;
+  border-spacing: 0;
+
+  & thead th {
+    text-transform: uppercase;
+    padding: .8rem;
+  }
+
+  & tbody tr td:first-child {
+    text-align: left;
+  }
+
+  & tbody tr td {
+    color: #999;
+    padding: .8rem 1.2rem;
+    text-align: center;
+  }
+
+  & tbody tr:nth-child(odd) {
+    background: #222;
+  }
+}
