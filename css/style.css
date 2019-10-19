@@ -90,6 +90,8 @@ a {
     text-transform: uppercase; }
   .btn--rounded {
     border-radius: 5px; }
+  .btn-icon {
+    margin-left: 1rem; }
 
 @media (max-width: 960px) {
   .btn--xl {
