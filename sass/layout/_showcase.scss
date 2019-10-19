@@ -65,3 +65,34 @@
     }
   }
 }
+
+@media (max-width: 960px) {
+  .showcase {
+    height: 70vh;
+
+    &__top img {
+      top: 30%;
+      left: 5%;
+      transform: translate(0);
+    }
+
+    &__content {
+      & .heading-primary {
+        font-size: 3.7rem;
+        line-height: 1;
+      }
+
+      & .paragraph {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+@media(max-width: 700px) {
+  .showcase {
+    &::after {
+      box-shadow: inset 8rem 8rem 25rem #000, inset -12rem -10rem 25rem #000;
+    }
+  }
+}

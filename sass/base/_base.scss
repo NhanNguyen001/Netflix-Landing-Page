@@ -12,6 +12,13 @@ html {
   font-size: 70%;
 }
 
-body { 
+body {
   box-sizing: border-box;
+}
+
+// Responsive for websiter
+@media (max-width: 960px) {
+  .hide-sm {
+    display: none;
+  }
 }

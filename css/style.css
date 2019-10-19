@@ -12,6 +12,10 @@ html {
 body {
   box-sizing: border-box; }
 
+@media (max-width: 960px) {
+  .hide-sm {
+    display: none; } }
+
 body {
   font-family: 'Arial', sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -52,6 +56,14 @@ a {
 .text-dark {
   color: #999; }
 
+@media (max-width: 960px) {
+  .text-xl {
+    font-size: 1.5rem; }
+  .text-lg {
+    font-size: 1.3rem; }
+  .text-md {
+    font-size: 1rem; } }
+
 /* Styling for button */
 .btn {
   display: inline-block;
@@ -78,6 +90,11 @@ a {
     text-transform: uppercase; }
   .btn--rounded {
     border-radius: 5px; }
+
+@media (max-width: 960px) {
+  .btn--xl {
+    font-size: 1.5rem;
+    padding: 1.4rem 2rem; } }
 
 .table {
   width: 100%;
@@ -149,6 +166,23 @@ a {
       line-height: 1.25;
       margin: 0 0 2rem; }
 
+@media (max-width: 960px) {
+  .showcase {
+    height: 70vh; }
+    .showcase__top img {
+      top: 30%;
+      left: 5%;
+      transform: translate(0); }
+    .showcase__content .heading-primary {
+      font-size: 3.7rem;
+      line-height: 1; }
+    .showcase__content .paragraph {
+      font-size: 1.5rem; } }
+
+@media (max-width: 700px) {
+  .showcase::after {
+    box-shadow: inset 8rem 8rem 25rem #000, inset -12rem -10rem 25rem #000; } }
+
 .tabs {
   background: #141414;
   padding-top: 1rem;
@@ -175,6 +209,12 @@ a {
   padding: 3rem 0;
   background: #000;
   color: #fff; }
+  .tab-content #tab-content-1,
+  .tab-content #tab-content-2,
+  .tab-content #tab-content-3 {
+    display: none; }
+  .tab-content--show {
+    display: block !important; }
   #tab-content-1 .tab-content__inner-1 {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -196,8 +236,39 @@ a {
     align-items: center;
     text-align: center; }
 
+@media (max-width: 700px) {
+  #tab-content-1 .tab-content__inner-1 {
+    grid-template-columns: 1fr;
+    text-align: center; }
+  #tab-content-2 .tab-content__top-2 {
+    display: block;
+    text-align: center; }
+  #tab-content-2 .tab-content__bottom-2 {
+    grid-template-columns: 1fr; } }
+
 .container {
   max-width: 70%;
   margin: auto;
   overflow: hidden;
   padding: 0 2rem; }
+
+.footer {
+  max-width: 75%;
+  margin: 1rem auto;
+  overflow: auto; }
+  .footer,
+  .footer a {
+    color: #999;
+    font-size: .9rem; }
+  .footer p {
+    margin-bottom: 1.5rem; }
+  .footer__cols {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2rem; }
+  .footer li {
+    line-height: 1.9; }
+
+@media (max-width: 960px) {
+  .footer__cols {
+    grid-template-columns: repeat(2, 1fr); } }

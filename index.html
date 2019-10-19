@@ -53,7 +53,7 @@
     <section class="tab-content">
       <div class="container">
         <!-- Tab Content 1 -->
-        <!-- <div id="tab-content-1" class="tab-content__item show">
+        <div id="tab-content-1" class="tab-content__item tab-content--show">
           <div class="tab-content__inner-1">
             <div>
               <p class="text-lg">
@@ -64,10 +64,10 @@
             </div>
             <img src="img/tab-content-1.png" alt="" />
           </div>
-        </div> -->
+        </div>
 
         <!-- Tab Content 2 -->
-        <!-- <div id="tab-content-2" class="tab-content__item">
+        <div id="tab-content-2" class="tab-content__item">
           <div class="tab-content__top-2">
             <p class="text-lg">
               Watch TV shows and movies anytime, anywhere - personalized for
@@ -101,7 +101,7 @@
               </p>
             </div>
           </div>
-        </div> -->
+        </div>
 
         <!-- Tab Content 3 -->
         <div id="tab-content-3" class="tab-content__item">
@@ -177,7 +177,65 @@
     </section>
 
     <div class="footer">
-      <p></p>
+      <p>Question? Call 1-866-579-7172</p>
+      <div class="footer__cols">
+        <ul>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Investor Relations</a></li>
+          <li><a href="#">Ways To Watch</a></li>
+          <li><a href="#">Corporate Information</a></li>
+          <li><a href="#">Netflix Originals</a></li>
+        </ul>
+        <ul>
+          <li><a href="#">Help Center</a></li>
+          <li><a href="#">Jobs</a></li>
+          <li><a href="#">Terms Of Use</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+        <ul>
+          <li><a href="#">Account</a></li>
+          <li><a href="#">Redeem Gift Cards</a></li>
+          <li><a href="#">Privacy</a></li>
+          <li><a href="#">Speed Test</a></li>
+        </ul>
+        <ul>
+          <li><a href="#">Media Center</a></li>
+          <li><a href="#">Buy Gift Cards</a></li>
+          <li><a href="#">Cookie Preferences</a></li>
+          <li><a href="#">Legal Notices</a></li>
+        </ul>
+      </div>
     </div>
   </body>
+
+  <script>
+    const tabItems = document.querySelectorAll('.tabs__tab-item');
+    const tabContentItems = document.querySelectorAll('.tab-content__item');
+
+    // Select tab content item
+    function selectItem(e) {
+      removeBorder();
+      removeShow();
+      // Add border to current tab
+      this.classList.add('tabs__tab-border');
+      // Grap content item from DOM
+      const tabContentItem = document.querySelector(
+        `#tab-content-${this.id.split('-')[1]}`
+      );
+      tabContentItem.classList.add('tab-content--show');
+    }
+
+    function removeBorder() {
+      tabItems.forEach(item => item.classList.remove('tabs__tab-border'));
+    }
+
+    function removeShow() {
+      tabContentItems.forEach(item =>
+        item.classList.remove('tab-content--show')
+      );
+    }
+
+    // List form tab click
+    tabItems.forEach(item => item.addEventListener('click', selectItem));
+  </script>
 </html>

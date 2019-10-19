@@ -13,6 +13,11 @@
     text-align: left;
   }
 
+  // & tbody tr td:not(:first-child) {
+  // text-align: center;
+  // color: aqua;
+  // }
+
   & tbody tr td {
     color: #999;
     padding: .8rem 1.2rem;
